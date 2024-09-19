@@ -1,4 +1,4 @@
-Alet mic;
+let mic;
 /*la linia anterior crea una variable que anomenem mic de microfon i la posem al principi de tot perqué és una variable global que afecta a tot el codi
 */
 function setup() {
