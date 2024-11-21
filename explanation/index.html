@@ -89,10 +89,15 @@
     <p>A continuació explicarem com es transforma el só en color amb un codi<pre></pre>
 <pre> <code> 
     let spectrum=fft.analyze(); //analitza fft o transformada de Fourier ràpida dek só per a obtenir el espectre de freqüencies i guardar-lo a "spectrum"
-    let bass=fft.getEnergy(); //obté l'energia dels sons greus que va de 0 a 255 i els guarda en la variable "bass"
-    let treble=fft.getEnergy(); //obté l'energia dels sons greus que va de 0 a 255 i els guarda en la variable "bass"
-    </code></a></p>
-    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
+    let bass=fft.getEnergy("bass"); //obté l'energia dels sons greus que va de 0 a 255 i els guarda en la variable "bass"
+    let treble=fft.getEnergy("treble"); //obté l'energia dels sons greus que va de 0 a 255 i els guarda en la variable "treble"
+    let r=map(bass,0,255,50,255);
+    let g=map(level,0,1,50,255);
+    let b=map(treble,0,255,50,255);
+    </code></pre>
+    <p>
+        El codi que veiem més amunt el que fa es analitzar
+    </p>
     <ul>
         <li>Creació d'una obra d'art geomètrica interactiva que reaccioni a la meva veu a través d'un micròfon i a diferents tecles del teclat, al ratolí, que faci moviments repetitius amb sin i cos, moviments aleatoris amb random... Utilitzarem p5.js.</li>
         <li>Aliments ecològics i convencionals amb C++.</li>
