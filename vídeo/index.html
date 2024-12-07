@@ -10,7 +10,7 @@
         body {
             background-color: #121212; /* Fons fosc */
             color: #e0e0e0; /* Text clar */
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; /* Tipografia unificada */
             margin: 0;
             padding: 0;
         }
@@ -30,6 +30,20 @@
 
         .navbar-nav .nav-link:hover {
             color: #ffffff;
+        }
+
+        .dropdown-menu {
+            background-color: #1f1f1f;
+            border: none;
+        }
+
+        .dropdown-item {
+            color: #b0b0b0;
+        }
+
+        .dropdown-item:hover {
+            color: #ffffff;
+            background-color: #00bcd4;
         }
 
         /* Contingut principal */
@@ -74,12 +88,6 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
         }
-
-        .video-description {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            color: #e0e0e0;
-        }
     </style>
 </head>
 <body>
@@ -97,14 +105,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="https://abouzian4.github.io">Inici</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tema 1</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Projectes</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Projecte 1</a>
-                        <a class="dropdown-item" href="#">Projecte 2</a>
-                        <a class="dropdown-item" href="#">Projecte 3</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="coldplayDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">My Coldplay Video</a>
+                    <div class="dropdown-menu" aria-labelledby="coldplayDropdown">
+                        <a class="dropdown-item" href="#">Idea del projecte</a>
+                        <a class="dropdown-item" href="#">Evolució del vídeo</a>
+                        <a class="dropdown-item" href="#">Resultat final</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                        <a class="dropdown-item" href="#">Project 1</a>
+                        <a class="dropdown-item" href="#">Project 2</a>
+                        <a class="dropdown-item" href="#">Project 3</a>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Tema 2</a></li>
@@ -128,7 +144,6 @@
     <video controls poster="" data-src="Anas Bouziani.Mp4.mp4" width="600" height="400" class="lazy-video">
         Your browser does not support the video tag.
     </video>
-    <p class="video-description">Watch the video to see how sound transforms into vibrant colors!</p>
 </div>
 
 <!-- Scripts -->
